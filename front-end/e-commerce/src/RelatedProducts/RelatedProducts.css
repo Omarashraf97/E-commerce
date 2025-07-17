@@ -1,0 +1,62 @@
+/* RelatedProducts.css */
+
+.relatedproducts {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .relatedproducts h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .relatedproducts hr {
+    width: 60px;
+    height: 4px;
+    background-color: #000;
+    border: none;
+    margin: 10px auto 30px;
+  }
+  
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Item card (you can refine this inside Item component as well) */
+  .item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive font scaling if needed */
+  @media (max-width: 768px) {
+    .relatedproducts h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .relatedproducts {
+      padding: 20px 10px;
+    }
+  
+    .relatedproducts h1 {
+      font-size: 1.25rem;
+    }
+  
+    .items {
+      gap: 15px;
+    }
+  }
+  

@@ -1,0 +1,142 @@
+.productdisplay {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    gap: 20px;
+
+  }
+  
+  .imglist {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+   flex-direction: column;
+  }
+  
+  .imglist img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .image {
+    text-align: center;
+  }
+  
+  .image .img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  .right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .rightstar img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .rightstar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .prices {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .old {
+    text-decoration: line-through;
+    color: gray;
+    font-weight: 500;
+  }
+  
+  .new {
+    color: #e60023;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .size h1 {
+    margin-bottom: 10px;
+  }
+  
+  .size p {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .size button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .size button:hover {
+    background-color: #e64545;
+  }
+  
+  .classification {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .classification span {
+    font-weight: bold;
+  }
+  
+  /* 🔁 Responsive for Tablets and Mobile */
+  @media (max-width: 768px) {
+    .productdisplay {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .imglist {
+      justify-content: center;
+    }
+  
+    .image .img {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .right {
+      padding-top: 20px;
+    }
+  }
+  

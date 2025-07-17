@@ -1,0 +1,110 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.Navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Navbar-logo img {
+  width: 30px;
+  height: auto;
+}
+
+.Navbar-logo p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-menu li hr {
+  border: none;
+  height: 3px;
+  background-color: red;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.nav-cart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-cart button {
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-cart button:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-cart img {
+  width: 24px;
+  height: auto;
+  position: relative;
+}
+
+.nav-cart img::after {
+  content: "0";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+}
+.nav-cart-count {
+  position: absolute;
+  top: 9px;
+  right: 47px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

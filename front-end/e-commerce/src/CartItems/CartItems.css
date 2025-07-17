@@ -1,0 +1,156 @@
+.cartitems {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .format-main img.product-icon {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .remove-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    width: 50px;
+    height: 40px;
+    border: 2px solid #ebebeb;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
+  .down {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .total {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .total h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .totalitem {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  .total hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  .total button {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .promocode {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .promocode p {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .promobox {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .promobox input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .promobox button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .format-main {
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 10px;
+      font-size: 14px;
+    }
+  
+    .format-main p:nth-child(n+4):not(:last-child),
+    .format-main img.remove-icon {
+      display: none;
+    }
+  
+    .product-icon {
+      width: 60px;
+    }
+  
+    .quantity {
+      width: 40px;
+      height: 35px;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 15px;
+    }
+  
+    .promobox {
+      flex-direction: column;
+    }
+  
+    .promobox input,
+    .promobox button {
+      width: 100%;
+    }
+  }
+  
