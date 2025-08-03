@@ -23,9 +23,9 @@ const CartItems = () => {
             <div key={e.id} className='format-main'>
               <img src={e.image} className='product-icon' alt={e.name} />
               <p>{e.name}</p>
-              <p>${e.new_price}</p>
+              <p>${e.newPrice}</p>
               <button className='quantity'>{CartItems[e.id]}</button>
-              <p>${e.new_price * CartItems[e.id]}</p>
+              <p>${e.newPrice * CartItems[e.id]}</p>
               <img
                 src={remove_icon}
                 className='remove-icon'

@@ -32,8 +32,8 @@ const ProductDisplay = (props) => {
                     <p>(122)</p>
                 </div>
                 <div className='prices'>
-                    <div className='old'>${product.old_price}</div>
-                    <div className='new'>${product.new_price}</div>
+                    <div className='old'>${product.oldPrice}</div>
+                    <div className='new'>${product.newPrice}</div>
                 </div>
                 <div className='description'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam et voluptas non numquam voluptatum accusamus a! Facere assumenda magni nulla quisquam, numquam mollitia suscipit veniam esse sint culpa. Cupiditate, exercitationem!

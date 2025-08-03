@@ -7,11 +7,11 @@ const AddProduct = () => {
 
   const [image,setImage]=useState(false)
   const [productDetails,setProductDetails]=useState({
-    name:'',
-    image :'',
-    category :'',
-    newPrice :'',
-    oldPrice :''
+    name:"",
+    image :"",
+    category :"women",
+    newPrice :"",
+    oldPrice :""
  })
 
  const imageHandler = (e) => {
@@ -31,15 +31,13 @@ const AddProduct = () => {
   await fetch('http://localhost:4000/upload',{
     method:'POST',
     headers:{
-      Accept:'application/json'
+      Accept:'application/json',
     },
     body:formData,
-  }).then((res)=>res.json()).then((data)=>{responseData=data})
+  }).then((resp)=>resp.json()).then((data)=>{responseData=data})
 
   if(responseData.success){
     product.image=responseData.image_url
-    product.newPrice = Number(product.newPrice);
-product.oldPrice = Number(product.oldPrice);
     console.log(product);
     await fetch('http://localhost:4000/addproduct',{
       method:'POST',
@@ -48,7 +46,7 @@ product.oldPrice = Number(product.oldPrice);
         'Content-Type':'application/json'
       },
       body:JSON.stringify(product),
-    }).then((res)=>res.json()).then((data)=>{
+    }).then((resp)=>resp.json()).then((data)=>{
       data.success?alert('Product Added'):alert ('Failed')
     })
     
@@ -60,7 +58,7 @@ product.oldPrice = Number(product.oldPrice);
     <div className='add-product'>
       <div className='addproduct-item'>
         <p>Product Title</p>
-        <input value={productDetails.name} onChange={changeHandler} type='text' name='name' placeholder='type your username'/>
+        <input value={productDetails.name} onChange={changeHandler} type='text' name='name' placeholder='type here '/>
       </div>
       <div className='addproduct-price'>
         <div className='addproduct-item'>
