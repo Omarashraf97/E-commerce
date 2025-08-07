@@ -6,6 +6,7 @@ const jwt = require ('jsonwebtoken');
 const multer = require ('multer');
 const mongoose = require ('mongoose');
 const path = require ('path');
+require('dotenv').config();
 
 const fetchUser = (req, res, next) => {
     const token = req.header('auth-token');
@@ -24,7 +25,7 @@ const fetchUser = (req, res, next) => {
 
 app.use(express.json());
 app.use(cors());
-mongoose.connect('mongodb+srv://omaraamin06:omarashrafamin@cluster0.4t3fjjh.mongodb.net/e-commerce')
+mongoose.connect(process.env.MONGO_URI)
 
 app.get('/', (req,res)=>{
     res.send('Express App is running')
